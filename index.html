@@ -1,0 +1,61 @@
+<!-- Solution Challenge révision #2 du 8 mars 2022 -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+
+    <!-- Lier la/les fonts Google de mon choix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Mon style css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Le style css de slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<body>
+    <div id="content">
+
+        <section>
+            <h1>Diaporama</h1>
+            <h2>Ça slide!</h2>
+            <p>Ce document montre un exemple d'installation et utilisation de Slick.js (en suivant <a href="https://kenwheeler.github.io/slick">les instructions ici</a>) et en bonus comment intégrer une <a href="https://fonts.google.com/specimen/Raleway?query=raleway">Google font</a>.</p>
+        </section>
+
+        <!-- Le container avec la classe qui va lui permettre d'être transformé par slick.js -->
+        <section class="diaporama">
+            <img src="img/REV22-IconGreen-01.png"/>
+            <img src="img/REV22-IconGreen-02.png"/>
+            <img src="img/REV22-IconGreen-03.png"/>
+            <img src="img/REV22-IconGreen-04.png"/>
+            <img src="img/REV22-IconGreen-05.png"/>
+        </section>
+
+    </div>
+    
+    <!-- Lien vers les librairies du dossier /slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- Le script qui active slick sur le container -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+          // Mettre ici la classe du container
+          $('.diaporama').slick({
+            //Mettre ici tous les paramètres qu'il vous faut.
+            //Voir les exemples sur https://kenwheeler.github.io/slick
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+          });
+        });
+      </script>
+</body>
+</html>
